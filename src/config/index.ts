@@ -1,0 +1,48 @@
+export { default as configuration } from './configuration';
+export { default as databaseConfig } from './database.config';
+export { default as redisConfig } from './redis.config';
+export { default as authConfig } from './auth.config';
+export { default as appConfig } from './app.config';
+export { default as corsConfig } from './cors.config';
+export { default as rateLimitConfig } from './rate-limit.config';
+export { default as swaggerConfig } from './swagger.config';
+export { default as emailConfig } from './email.config';
+export { default as storageConfig } from './storage.config';
+export { default as queueConfig } from './queue.config';
+export { default as loggerConfig } from './logger.config';
+export { default as monitoringConfig } from './monitoring.config';
+export { default as validationConfig } from './validation.config';
+export { default as websocketConfig } from './websocket.config';
+export { default as cacheConfig } from './cache.config';
+export { ConfigModule } from './config.module';
+
+// Type definitions for better TypeScript support
+export type AppConfig = ReturnType<typeof import('./app.config').default>;
+export type DatabaseConfig = ReturnType<
+  typeof import('./database.config').default
+>;
+export type RedisConfig = ReturnType<typeof import('./redis.config').default>;
+export type AuthConfig = ReturnType<typeof import('./auth.config').default>;
+export type CorsConfig = ReturnType<typeof import('./cors.config').default>;
+export type RateLimitConfig = ReturnType<
+  typeof import('./rate-limit.config').default
+>;
+export type SwaggerConfig = ReturnType<
+  typeof import('./swagger.config').default
+>;
+export type EmailConfig = ReturnType<typeof import('./email.config').default>;
+export type StorageConfig = ReturnType<
+  typeof import('./storage.config').default
+>;
+export type QueueConfig = ReturnType<typeof import('./queue.config').default>;
+export type LoggerConfig = ReturnType<typeof import('./logger.config').default>;
+export type MonitoringConfig = ReturnType<
+  typeof import('./monitoring.config').default
+>;
+export type ValidationConfig = ReturnType<
+  typeof import('./validation.config').default
+>;
+export type WebSocketConfig = ReturnType<
+  typeof import('./websocket.config').default
+>;
+export type CacheConfig = ReturnType<typeof import('./cache.config').default>;

@@ -3,6 +3,85 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "tsconfig.build.json",
+    "assets": [
+      {
+        "include": "**/*.hbs",
+        "outDir": "dist/src",
+        "watchAssets": true
+      },
+      {
+        "include": "**/*.json",
+        "outDir": "dist/src",
+        "watchAssets": true
+      }
+    ],
+    "watchAssets": true,
+    "plugins": [
+      {
+        "name": "@nestjs/swagger",
+        "options": {
+          "classValidatorShim": true,
+          "introspectComments": true,
+          "dtoFileNameSuffix": [".dto.ts", ".entity.ts"]
+        }
+      }
+    ]
+  },
+  "generateOptions": {
+    "spec": true,
+    "flat": false
+  },
+  "schematics": {
+    "@nestjs/schematics:module": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:controller": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:service": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:provider": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:filter": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:gateway": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:guard": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:interceptor": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:middleware": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:pipe": {
+      "spec": true,
+      "flat": false
+    },
+    "@nestjs/schematics:decorator": {
+      "spec": false,
+      "flat": true
+    },
+    "@nestjs/schematics:resolver": {
+      "spec": true,
+      "flat": false
+    }
   }
 }

@@ -1,25 +1,60 @@
-# compiled output
+# ============================================
+# Compiled output
+# ============================================
 /dist
-/node_modules
 /build
+/node_modules
+/.pnp
+.pnp.js
+.pnp.*
+*.tsbuildinfo
 
+# ============================================
 # Logs
-logs
+# ============================================
+/logs
 *.log
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+pm2-*.log
+pm2-error.log
+pm2-out.log
 
+# ============================================
 # OS
+# ============================================
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.directory
+*.orig
 
-# Tests
+# ============================================
+# Tests / Coverage
+# ============================================
 /coverage
 /.nyc_output
+/test-results
+/test-report.html
+/junit.xml
+/.jest
+/.cache
+*.test-results
 
+# ============================================
 # IDEs and editors
+# ============================================
 /.idea
 .project
 .classpath
@@ -27,30 +62,330 @@ lerna-debug.log*
 *.launch
 .settings/
 *.sublime-workspace
-
-# IDE - VSCode
+*.sublime-project
+*.code-workspace
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/*.code-snippets
+!.vscode/keybindings.json
 
+# ============================================
+# Environment variables
+# ============================================
 # dotenv environment variable files
 .env
+.env.*
+!.env.example
+!.env.development.example
+!.env.staging.example
+!.env.production.example
 .env.development.local
 .env.test.local
 .env.production.local
 .env.local
+.env.test
 
-# temp directory
+# ============================================
+# Secrets and certificates
+# ============================================
+*.pem
+*.key
+*.cert
+*.crt
+*.csr
+secrets/
+.ssl/
+certificates/
+
+# ============================================
+# Database
+# ============================================
+*.sqlite
+*.sqlite-journal
+*.sqlite3
+*.db
+*.db-journal
+*.sql
+*.sql.gz
+*.sql.zip
+*.dump
+prisma/*.db
+prisma/*.db-journal
+prisma/migrations/*.sql
+
+# ============================================
+# Temporary and cache directories
+# ============================================
 .temp
 .tmp
+tmp/
+temp/
+*.tmp
+*.temp
+.cache
+.eslintcache
+.parcel-cache
+.next
+.nuxt
+.stencil
+.rollup.cache
 
+# ============================================
+# Uploads and storage
+# ============================================
+/uploads
+/storage
+/uploads/*
+!uploads/.gitkeep
+/storage/*
+!storage/.gitkeep
+public/uploads
+public/storage
+
+# ============================================
 # Runtime data
+# ============================================
 pids
 *.pid
 *.seed
 *.pid.lock
+*.pidlock
+*.lock
+.lock-wscript
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
+# ============================================
+# Diagnostic reports
+# ============================================
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+report.*.json
+diagnostic-report.json
+
+# ============================================
+# Docker
+# ============================================
+docker/nginx/ssl/*.pem
+docker/nginx/ssl/*.key
+docker/nginx/ssl/*.crt
+docker/nginx/ssl/*.csr
+.dockerignore
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# ============================================
+# Kubernetes / Helm
+# ============================================
+*.kubeconfig
+kubeconfig
+*.helmignore
+helm/values.*.yaml
+!helm/values.yaml
+*.secret.yaml
+secrets.yaml
+
+# ============================================
+# Build tools
+# ============================================
+dist/
+build/
+out/
+target/
+*.tsbuildinfo
+*.tgz
+*.tar.gz
+*.zip
+
+# ============================================
+# Dependency directories
+# ============================================
+node_modules/
+jspm_packages/
+bower_components/
+.typings/
+
+# ============================================
+# Optional npm cache directory
+# ============================================
+.npm
+.eslintcache
+.stylelintcache
+
+# ============================================
+# Optional REPL history
+# ============================================
+.node_repl_history
+.nyc_output
+.tsnode*
+
+# ============================================
+# Yarn
+# ============================================
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.yarn/cache
+.yarn/install-state.gz
+.yarn/unplugged
+
+# ============================================
+# Pnpm
+# ============================================
+.pnpm-store/
+.pnpm-debug.log*
+
+# ============================================
+# Lerna
+# ============================================
+lerna-debug.log
+
+# ============================================
+# Microservices / Service mesh
+# ============================================
+.consul/
+.etcd/
+.service-registry/
+
+# ============================================
+# Misc
+# ============================================
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.tsbuildinfo
+.DS_Store
+.idea/
+.vscode/
+*.sublime-*
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.code-workspace
+
+# ============================================
+# Application specific
+# ============================================
+# Prisma
+prisma/*.db
+prisma/*.db-journal
+prisma/migrations/*.sql
+!.gitkeep
+
+# PM2
+.pm2/
+pm2-*.log
+pm2-error.log
+pm2-out.log
+ecosystem.config.js
+!.pm2/ecosystem.config.js
+
+# Backup files
+*.backup
+*.bak
+backups/
+*.sql.gz
+*.sql.zip
+
+# Session files
+.sessions/
+.session
+.session-cookie
+
+# Data directories
+data/
+databases/
+*.sqlite
+*.db
+
+# Redis dumps
+dump.rdb
+appendonly.aof
+
+# MinIO
+minio_data/
+.minio.sys/
+
+# MailHog
+mailhog_data/
+maildir/
+
+# ============================================
+# Terraform
+# ============================================
+*.tfstate
+*.tfstate.*
+.terraform/
+terraform.tfvars
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*.override.tf
+*.override.tf.json
+.terraform.lock.hcl
+crash.log
+crash.*.log
+
+# ============================================
+# Cloud provider specific
+# ============================================
+# AWS
+.aws/
+aws.json
+credentials
+
+# GCP
+.gcloud/
+*.json
+service-account.json
+
+# Azure
+.azure/
+*.publishsettings
+
+# ============================================
+# Performance monitoring
+# ============================================
+*.cpuprofile
+*.heapsnapshot
+*.heapsnapshot.*
+*.profile
+*.heapprofile
+
+# ============================================
+# Debug
+# ============================================
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ============================================
+# Local development overrides
+# ============================================
+*.local
+*.local.*
+!.env.example.local
+
+# ============================================
+# Production builds
+# ============================================
+*.tar.gz
+*.zip
+dist-*/
+release/
+package/

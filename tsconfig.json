@@ -1,25 +1,69 @@
+// {
+//   "compilerOptions": {
+//     "module": "nodenext",
+//     "moduleResolution": "nodenext",
+//     "resolvePackageJsonExports": true,
+//     "esModuleInterop": true,
+//     "isolatedModules": true,
+//     "declaration": true,
+//     "removeComments": true,
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+//     "allowSyntheticDefaultImports": true,
+//     "target": "ES2023",
+//     "sourceMap": true,
+//     "outDir": "./dist",
+//     "baseUrl": "./",
+//     "incremental": true,
+//     "skipLibCheck": true,
+//     "strictNullChecks": true,
+//     "forceConsistentCasingInFileNames": true,
+//     "noImplicitAny": false,
+//     "strictBindCallApply": false,
+//     "noFallthroughCasesInSwitch": false
+//   }
+// }
+
+
 {
   "compilerOptions": {
-    "module": "nodenext",
-    "moduleResolution": "nodenext",
-    "resolvePackageJsonExports": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
+    "module": "commonjs",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2023",
+    "target": "ES2022",
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
-  }
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "@/*": ["src/*"],
+      "@config/*": ["src/config/*"],
+      "@common/*": ["src/common/*"],
+      "@core/*": ["src/core/*"],
+      "@shared/*": ["src/shared/*"],
+      "@modules/*": ["src/modules/*"],
+      "@test/*": ["test/*"]
+    },
+    "types": ["node", "jest"]
+  },
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["node_modules", "dist", "coverage",     ".eslintrc.js", // Add this line
+    "*.js" // Optionally exclude all JavaScript files
+    ]
 }
