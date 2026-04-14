@@ -18,31 +18,17 @@ export { ConfigModule } from './config.module';
 
 // Type definitions for better TypeScript support
 export type AppConfig = ReturnType<typeof import('./app.config').default>;
-export type DatabaseConfig = ReturnType<
-  typeof import('./database.config').default
->;
+export type DatabaseConfig = ReturnType<typeof import('./database.config').default>;
 export type RedisConfig = ReturnType<typeof import('./redis.config').default>;
 export type AuthConfig = ReturnType<typeof import('./auth.config').default>;
 export type CorsConfig = ReturnType<typeof import('./cors.config').default>;
-export type RateLimitConfig = ReturnType<
-  typeof import('./rate-limit.config').default
->;
-export type SwaggerConfig = ReturnType<
-  typeof import('./swagger.config').default
->;
+export type RateLimitConfig = ReturnType<typeof import('./rate-limit.config').default>;
+export type SwaggerConfig = ReturnType<typeof import('./swagger.config').default>;
 export type EmailConfig = ReturnType<typeof import('./email.config').default>;
-export type StorageConfig = ReturnType<
-  typeof import('./storage.config').default
->;
+export type StorageConfig = ReturnType<typeof import('./storage.config').default>;
 export type QueueConfig = ReturnType<typeof import('./queue.config').default>;
 export type LoggerConfig = ReturnType<typeof import('./logger.config').default>;
-export type MonitoringConfig = ReturnType<
-  typeof import('./monitoring.config').default
->;
-export type ValidationConfig = ReturnType<
-  typeof import('./validation.config').default
->;
-export type WebSocketConfig = ReturnType<
-  typeof import('./websocket.config').default
->;
+export type MonitoringConfig = ReturnType<typeof import('./monitoring.config').default>;
+export type ValidationConfig = ReturnType<typeof import('./validation.config').default>;
+export type WebSocketConfig = ReturnType<typeof import('./websocket.config').default>;
 export type CacheConfig = ReturnType<typeof import('./cache.config').default>;

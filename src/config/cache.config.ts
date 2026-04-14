@@ -9,9 +9,7 @@ export default registerAs('cache', () => ({
   max: 1000,
 
   // Key prefix
-  keyPrefix: process.env.APP_NAME
-    ? `${process.env.APP_NAME.toLowerCase()}:cache:`
-    : 'cache:',
+  keyPrefix: process.env.APP_NAME ? `${process.env.APP_NAME.toLowerCase()}:cache:` : 'cache:',
 
   // Redis connection (reuse from redis config)
   redis: {

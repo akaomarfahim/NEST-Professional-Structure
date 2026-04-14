@@ -19,8 +19,7 @@ export default registerAs('validation', () => ({
     maxLength: '{{property}} must be at most {{constraints.0}} characters',
     isNumber: '{{property}} must be a number',
     isInt: '{{property}} must be an integer',
-    isEnum:
-      '{{property}} must be one of the following values: {{constraints.0}}',
+    isEnum: '{{property}} must be one of the following values: {{constraints.0}}',
   },
 
   // Sanitization

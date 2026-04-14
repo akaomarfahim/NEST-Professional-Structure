@@ -15,15 +15,12 @@ export default registerAs('email', () => ({
   // Queue Configuration
   queue: {
     enabled: process.env.EMAIL_QUEUE_ENABLED === 'true',
-    concurrency:
-      parseInt(process.env.EMAIL_QUEUE_CONCURRENCY as string, 10) || 5,
+    concurrency: parseInt(process.env.EMAIL_QUEUE_CONCURRENCY as string, 10) || 5,
   },
 
   // Templates
   templates: {
-    path:
-      process.env.EMAIL_TEMPLATES_PATH ||
-      './src/modules/notifications/templates/email',
+    path: process.env.EMAIL_TEMPLATES_PATH || './src/modules/notifications/templates/email',
     engine: 'hbs',
   },
 

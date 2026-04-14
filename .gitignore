@@ -389,3 +389,4 @@ lerna-debug.log*
 dist-*/
 release/
 package/
+/generated/prisma

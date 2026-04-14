@@ -13,10 +13,8 @@ export default registerAs('database', () => ({
   pool: {
     min: parseInt(process.env.DATABASE_POOL_MIN as string, 10) || 2,
     max: parseInt(process.env.DATABASE_POOL_MAX as string, 10) || 10,
-    idleTimeout:
-      parseInt(process.env.DATABASE_IDLE_TIMEOUT as string, 10) || 10000,
-    connectionTimeout:
-      parseInt(process.env.DATABASE_CONNECTION_TIMEOUT as string, 10) || 30000,
+    idleTimeout: parseInt(process.env.DATABASE_IDLE_TIMEOUT as string, 10) || 10000,
+    connectionTimeout: parseInt(process.env.DATABASE_CONNECTION_TIMEOUT as string, 10) || 30000,
   },
 
   // SSL configuration
@@ -30,8 +28,7 @@ export default registerAs('database', () => ({
 
   // Query logging
   queryLogging: process.env.DATABASE_QUERY_LOGGING === 'true',
-  slowQueryThreshold:
-    parseInt(process.env.DATABASE_QUERY_LOGGING_THRESHOLD as string, 10) || 100,
+  slowQueryThreshold: parseInt(process.env.DATABASE_QUERY_LOGGING_THRESHOLD as string, 10) || 100,
 
   // Test database (for e2e tests)
   testUrl: process.env.TEST_DATABASE_URL,

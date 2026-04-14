@@ -4,8 +4,7 @@ export default registerAs('app', () => ({
   // Application metadata
   name: process.env.APP_NAME || 'NestJS Enterprise App',
   version: process.env.APP_VERSION || '1.0.0',
-  description:
-    process.env.APP_DESCRIPTION || 'Enterprise-grade NestJS application',
+  description: process.env.APP_DESCRIPTION || 'Enterprise-grade NestJS application',
 
   // Environment
   env: process.env.NODE_ENV || 'development',
@@ -22,11 +21,7 @@ export default registerAs('app', () => ({
 
   // Internationalization
   defaultLanguage: process.env.DEFAULT_LANGUAGE || 'en',
-  supportedLanguages: process.env.SUPPORTED_LANGUAGES?.split(',') || [
-    'en',
-    'es',
-    'fr',
-  ],
+  supportedLanguages: process.env.SUPPORTED_LANGUAGES?.split(',') || ['en', 'es', 'fr'],
   fallbackLanguage: process.env.I18N_FALLBACK_LANGUAGE || 'en',
 
   // Debugging

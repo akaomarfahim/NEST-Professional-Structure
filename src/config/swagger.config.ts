@@ -3,15 +3,13 @@ import { registerAs } from '@nestjs/config';
 export default registerAs('swagger', () => ({
   enabled: process.env.SWAGGER_ENABLED === 'true',
   title: process.env.SWAGGER_TITLE || 'API Documentation',
-  description:
-    process.env.SWAGGER_DESCRIPTION || 'API documentation for the application',
+  description: process.env.SWAGGER_DESCRIPTION || 'API documentation for the application',
   version: process.env.SWAGGER_VERSION || '1.0',
   path: process.env.SWAGGER_PATH || 'api/docs',
 
   // Authentication for Swagger UI
   auth: {
-    enabled:
-      process.env.SWAGGER_USER && process.env.SWAGGER_PASSWORD ? true : false,
+    enabled: process.env.SWAGGER_USER && process.env.SWAGGER_PASSWORD ? true : false,
     user: process.env.SWAGGER_USER,
     password: process.env.SWAGGER_PASSWORD,
   },

@@ -34,7 +34,5 @@ export default registerAs('redis', () => ({
   },
 
   // Key prefix
-  keyPrefix: process.env.APP_NAME
-    ? `${process.env.APP_NAME.toLowerCase()}:`
-    : 'app:',
+  keyPrefix: process.env.APP_NAME ? `${process.env.APP_NAME.toLowerCase()}:` : 'app:',
 }));

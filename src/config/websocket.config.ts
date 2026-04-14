@@ -5,9 +5,7 @@ export default registerAs('websocket', () => ({
   port: parseInt(process.env.WEBSOCKET_PORT as string, 10) || 3001,
   path: process.env.WEBSOCKET_PATH || '/socket.io',
   cors: {
-    origin: process.env.WEBSOCKET_CORS_ORIGINS?.split(',') || [
-      'http://localhost:3000',
-    ],
+    origin: process.env.WEBSOCKET_CORS_ORIGINS?.split(',') || ['http://localhost:3000'],
     credentials: true,
   },
 

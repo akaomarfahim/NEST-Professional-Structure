@@ -28,8 +28,7 @@ export default registerAs('auth', () => ({
   // Two-Factor Authentication
   twoFactor: {
     enabled: process.env.TWO_FACTOR_AUTH_ENABLED === 'true',
-    appName:
-      process.env.TWO_FACTOR_APP_NAME || process.env.APP_NAME || 'NestJS App',
+    appName: process.env.TWO_FACTOR_APP_NAME || process.env.APP_NAME || 'NestJS App',
   },
 
   // OAuth Providers

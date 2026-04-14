@@ -12,8 +12,7 @@ export default registerAs('app', () => ({
   maintenance: {
     enabled: process.env.MAINTENANCE_MODE === 'true',
     message:
-      process.env.MAINTENANCE_MESSAGE ||
-      'System is under maintenance. Please check back later.',
+      process.env.MAINTENANCE_MESSAGE || 'System is under maintenance. Please check back later.',
     allowedIps: process.env.MAINTENANCE_ALLOWED_IPS?.split(',') || [],
   },
 

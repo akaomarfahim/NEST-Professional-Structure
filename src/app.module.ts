@@ -6,9 +6,10 @@ import { UsersModule } from './modules/users/users.module';
 import { CoreModule } from './core/core.module';
 import { CliModule } from './cli/cli.module';
 import { HealthModule } from './modules/health/health.module';
+import { ProductsModule } from './modules/products/products.module';
 
 @Module({
-  imports: [ConfigModule, UsersModule, CoreModule, CliModule, HealthModule],
+  imports: [ConfigModule, UsersModule, CoreModule, CliModule, HealthModule, ProductsModule],
   controllers: [AppController],
   providers: [AppService],
 })

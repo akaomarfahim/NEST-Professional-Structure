@@ -7,6 +7,6 @@ import { CacheModule } from './cache/cache.module';
 import { QueueModule } from './queue/queue.module';
 
 @Module({
-  imports: [DatabaseModule, I18nModule, RedisModule, LoggerModule, CacheModule, QueueModule]
+  imports: [DatabaseModule, I18nModule, RedisModule, LoggerModule, CacheModule, QueueModule],
 })
 export class CoreModule {}

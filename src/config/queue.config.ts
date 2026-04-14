@@ -6,12 +6,10 @@ export default registerAs('queue', () => ({
 
   // Default job options
   defaultJobOptions: {
-    attempts:
-      parseInt(process.env.QUEUE_DEFAULT_JOB_ATTEMPTS as string, 10) || 3,
+    attempts: parseInt(process.env.QUEUE_DEFAULT_JOB_ATTEMPTS as string, 10) || 3,
     backoff: {
       type: 'exponential',
-      delay:
-        parseInt(process.env.QUEUE_DEFAULT_BACKOFF_DELAY as string, 10) || 5000,
+      delay: parseInt(process.env.QUEUE_DEFAULT_BACKOFF_DELAY as string, 10) || 5000,
     },
     removeOnComplete: 100,
     removeOnFail: 500,
